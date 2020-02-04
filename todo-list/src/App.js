@@ -1,12 +1,15 @@
 import React, { useReducer } from 'react';
 
+// Import Reducer 
 import { reducer, initialState } from './reducer/reducer';
 
+// Components
 import TodoList from './components/TodoList';
 import InputForm from './components/InputForm';
 
 
 const App = () => {
+
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const addItem = (e, item) => {
@@ -14,7 +17,7 @@ const App = () => {
   };
 
   const toggleTodo = itemid => {
-    dispatch({ type: 'TOGGLE_COMPLETED', payload: itemid });
+    dispatch({ type: 'TOGGLE_TODO', payload: itemid });
   };
 
   const clearCompleted = e => {

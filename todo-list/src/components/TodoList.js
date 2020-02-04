@@ -1,11 +1,11 @@
 import React from 'react';
 import Todo from './Todo';
 
-const Todos = ({todos, toggleCompleted, clearCompleted}) => {
+const Todos = ({todos, toggleTodo, clearCompleted}) => {
   return (
     <div>
       {todos.map(todo => (
-        <Todo key={todo.id} todo={todo} toggleCompleted={toggleCompleted} />
+        <Todo key={todo.id} todo={todo} toggleTodo={toggleTodo} />
       ))}
       <button onClick={clearCompleted}>Clear</button>
     </div>
