@@ -3,6 +3,8 @@ import React, { useReducer } from 'react';
 // Import Reducer 
 import { reducer, initialState } from './reducer/reducer';
 
+import './components/App.css';
+
 // Components
 import TodoList from './components/TodoList';
 import InputForm from './components/InputForm';
